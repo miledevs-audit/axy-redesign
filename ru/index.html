@@ -724,37 +724,40 @@ dialog.dl-chat{width:min(1100px,calc(100% - 24px))}
 .st-p{font-size:14px;line-height:1.45;color:var(--mut)}
 .st-m{margin-top:auto;padding-top:8px;display:inline-flex;align-items:center;gap:6px;font-size:13.5px;font-weight:500;color:var(--o2)}
 .st-m .i{width:14px;height:14px}
-.quotes{grid-template-columns:repeat(3,minmax(0,1fr))}
-.q{box-shadow:none;background:var(--card)}
-.chats-one{margin-top:28px;display:flex;justify-content:center}
-.tm-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px 16px}
-.tm{display:flex;flex-direction:column;align-items:center;text-align:center;gap:10px}
-.tm img{width:96px;height:96px;border-radius:50%;object-fit:cover;border:2px solid var(--stroke2)}
-.tm figcaption b{display:block;font:600 16px/1.3 var(--ff-h)}
-.tm figcaption small{display:block;margin-top:2px;font-size:13.5px;color:var(--mut)}
+.chats-one{margin:-18px 0 0;display:flex;justify-content:center}
+.chats{display:grid;gap:18px}
+.mq-rev .mq-t{animation-direction:reverse}
+.cgrid,.cgrid[data-n="4"]{display:flex;flex-wrap:wrap;justify-content:center;gap:18px}
+.cgrid .case{flex:0 0 calc((100% - 54px)/4);min-width:0}
+.cgrid .case-m,.cgrid[data-n="4"] .case-m{aspect-ratio:4/3}
+.cgrid .case-b{padding:16px 16px 18px}
+.cgrid .case-k b{font-size:26px}
+.cgrid .case-k.txt b{font-size:19px}
+.cgrid .case-b h3{font-size:17px;margin-top:10px}
+.cgrid .case-b p{font-size:14px}
+.tstats{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;width:100%;max-width:460px;margin-top:8px}
+.tstats .fact{padding:18px 16px;border:1px solid var(--stroke);border-radius:16px;background:rgba(33,33,33,.3)}
+.tstats .fact b{font-size:clamp(36px,4vw,48px)}
 .cta-box{background-image:none;box-shadow:none;border-color:var(--line);background-color:var(--card)}
 .ftr{padding-bottom:30px}
 .ftr-top{grid-template-columns:minmax(0,1fr) minmax(0,1.5fr)}
 .ftr-cols{grid-template-columns:.8fr 1.3fr .8fr}
 .cta-l{justify-content:center}
-@media (max-width:1100px){.st-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media (max-width:1100px){.st-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.cgrid .case{flex-basis:calc((100% - 18px)/2)}}
 @media (max-width:1024px){
   .hs-g{grid-template-columns:1fr}
   .hs-c{align-items:center;text-align:center;display:flex;flex-direction:column}
   .hs-p{margin-inline:auto}
   .hs-btns,.hs-trust{justify-content:center}
-  .quotes{grid-template-columns:1fr 1fr}
-  .quotes .q:nth-child(3){grid-column:span 2}
+  .team-l .tstats{margin-inline:auto}
 }
 @media (max-width:760px){
   .st-grid{grid-template-columns:1fr 1fr;gap:10px}
   .st{padding:16px 14px}
   .st-p,.st-m{display:none}
   .st-t{font-size:15px}
-  .quotes{grid-template-columns:1fr}
-  .quotes .q:nth-child(3){grid-column:auto}
-  .tm-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:22px 8px}
-  .tm img{width:72px;height:72px}
+  .cgrid .case{flex-basis:100%}
+  .chat{height:150px}
   .pl-row{gap:16px 32px}
   .pl-row .pl-logo{font-size:20px}
   .pl-row .pl-logo .b{width:22px;height:22px}
@@ -765,7 +768,6 @@ dialog.dl-chat{width:min(1100px,calc(100% - 24px))}
   .hs-btns{flex-direction:column;align-self:stretch}
   .hs-btns .btn{width:100%}
   .hs-trust{flex-direction:column;gap:2px}
-  .tm-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
   .ftr-cols>div:nth-child(3){grid-column:auto}
 }
 </style>
@@ -819,7 +821,10 @@ dialog.dl-chat{width:min(1100px,calc(100% - 24px))}
 <!-- ================= PARTNERS ================= -->
 <section class="partners" aria-label="Официальные партнёры">
   <p class="partners-t rv">Официальные партнёры</p>
-  <div class="pl-row"><span class="pl-logo"><svg class="b" aria-hidden="true" focusable="false"><use href="#b-amazon"/></svg>Amazon</span><span class="pl-logo"><svg class="b" aria-hidden="true" focusable="false"><use href="#b-tiktok"/></svg>TikTok Shop</span><span class="pl-logo"><svg class="b" aria-hidden="true" focusable="false"><use href="#b-shopify"/></svg>Shopify</span><span class="pl-logo"><svg class="b" aria-hidden="true" focusable="false"><use href="#b-meta"/></svg>Meta</span><span class="pl-logo"><svg class="b" aria-hidden="true" focusable="false"><use href="#b-google"/></svg>Google</span></div>
+  <div class="mq rv" style="--d:.1s">
+    <div class="mq-t">
+<div class="mq-set"><span class="pl-logo"><svg class="b" aria-hidden="true" focusable="false"><use href="#b-amazon"/></svg>Amazon</span><span class="pl-logo"><svg class="b" aria-hidden="true" focusable="false"><use href="#b-tiktok"/></svg>TikTok Shop</span><span class="pl-logo"><svg class="b" aria-hidden="true" focusable="false"><use href="#b-shopify"/></svg>Shopify</span><span class="pl-logo"><svg class="b" aria-hidden="true" focusable="false"><use href="#b-meta"/></svg>Meta</span><span class="pl-logo"><svg class="b" aria-hidden="true" focusable="false"><use href="#b-google"/></svg>Google</span><span class="pl-logo dup"><svg class="b" aria-hidden="true" focusable="false"><use href="#b-amazon"/></svg>Amazon</span><span class="pl-logo dup"><svg class="b" aria-hidden="true" focusable="false"><use href="#b-tiktok"/></svg>TikTok Shop</span><span class="pl-logo dup"><svg class="b" aria-hidden="true" focusable="false"><use href="#b-shopify"/></svg>Shopify</span><span class="pl-logo dup"><svg class="b" aria-hidden="true" focusable="false"><use href="#b-meta"/></svg>Meta</span><span class="pl-logo dup"><svg class="b" aria-hidden="true" focusable="false"><use href="#b-google"/></svg>Google</span></div><div class="mq-set" aria-hidden="true"><span class="pl-logo"><svg class="b" aria-hidden="true" focusable="false"><use href="#b-amazon"/></svg>Amazon</span><span class="pl-logo"><svg class="b" aria-hidden="true" focusable="false"><use href="#b-tiktok"/></svg>TikTok Shop</span><span class="pl-logo"><svg class="b" aria-hidden="true" focusable="false"><use href="#b-shopify"/></svg>Shopify</span><span class="pl-logo"><svg class="b" aria-hidden="true" focusable="false"><use href="#b-meta"/></svg>Meta</span><span class="pl-logo"><svg class="b" aria-hidden="true" focusable="false"><use href="#b-google"/></svg>Google</span><span class="pl-logo dup"><svg class="b" aria-hidden="true" focusable="false"><use href="#b-amazon"/></svg>Amazon</span><span class="pl-logo dup"><svg class="b" aria-hidden="true" focusable="false"><use href="#b-tiktok"/></svg>TikTok Shop</span><span class="pl-logo dup"><svg class="b" aria-hidden="true" focusable="false"><use href="#b-shopify"/></svg>Shopify</span><span class="pl-logo dup"><svg class="b" aria-hidden="true" focusable="false"><use href="#b-meta"/></svg>Meta</span><span class="pl-logo dup"><svg class="b" aria-hidden="true" focusable="false"><use href="#b-google"/></svg>Google</span></div>    </div>
+  </div>
 </section>
 
 <!-- ================= SERVICES ================= -->
@@ -842,13 +847,13 @@ dialog.dl-chat{width:min(1100px,calc(100% - 24px))}
       <p class="sub rv">Мы не просто обещаем, а показываем реальные цифры и истории успеха брендов, с которыми работали.</p>
     </div>
     <div class="tabs rv" role="tablist" aria-label="Кейсы">
-      <button class="tab" type="button" role="tab" id="ct-amazon" aria-controls="cp-amazon" aria-selected="true" data-tab="amazon"><svg class="b" aria-hidden="true" focusable="false"><use href="#b-amazon"/></svg>Amazon<span class="n">3</span></button>
+      <button class="tab" type="button" role="tab" id="ct-amazon" aria-controls="cp-amazon" aria-selected="true" data-tab="amazon"><svg class="b" aria-hidden="true" focusable="false"><use href="#b-amazon"/></svg>Amazon<span class="n">4</span></button>
       <button class="tab" type="button" role="tab" id="ct-tiktok" aria-controls="cp-tiktok" aria-selected="false" tabindex="-1" data-tab="tiktok"><svg class="b" aria-hidden="true" focusable="false"><use href="#b-tiktok"/></svg>TikTok Shop<span class="n">3</span></button>
       <button class="tab" type="button" role="tab" id="ct-shopify" aria-controls="cp-shopify" aria-selected="false" tabindex="-1" data-tab="shopify"><svg class="b" aria-hidden="true" focusable="false"><use href="#b-shopify"/></svg>Shopify<span class="n">4</span></button>
       <span class="tabs-ind" aria-hidden="true"></span>
     </div>
     <div class="cpanels rv">
-      <div class="cgrid" role="tabpanel" id="cp-amazon" aria-labelledby="ct-amazon" data-n="3">
+      <div class="cgrid" role="tabpanel" id="cp-amazon" aria-labelledby="ct-amazon" data-n="4">
         <article class="case" style="--i:0">
           <div class="case-m">
             <img src="../img/case-humidifier.webp" alt="Увлажнитель воздуха в виде гриба" loading="lazy" decoding="async" width="800" height="600">
@@ -878,6 +883,20 @@ dialog.dl-chat{width:min(1100px,calc(100% - 24px))}
           </div>
         </article>
         <article class="case" style="--i:2">
+          <div class="case-m">
+            <img src="../img/case-furniture.webp" alt="Детская мебель" loading="lazy" decoding="async" width="800" height="600">
+            <span class="case-pl"><span><svg class="b" aria-hidden="true" focusable="false"><use href="#b-shopify"/></svg>Shopify</span></span>
+          </div>
+          <div class="case-b">
+            <div class="case-k"><b>+180%</b><span>заявок с сайта</span></div>
+            <h3>Детская мебель</h3>
+            <p>Создали экосистему продаж вне маркетплейсов: сайт на Shopify, реклама, SMM и мобильное приложение с AR.</p>
+            <div class="case-a">
+              <button class="btn btn-simple btn-sm" type="button" data-case="furniture" aria-haspopup="dialog">Подробнее <svg class="i" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg></button>
+            </div>
+          </div>
+        </article>
+        <article class="case" style="--i:3">
           <div class="case-m">
             <img src="../img/case-diamond.webp" alt="Алмазная мозаика" loading="lazy" decoding="async" width="800" height="600">
             <span class="case-pl"><span><svg class="b" aria-hidden="true" focusable="false"><use href="#b-amazon"/></svg>Amazon</span><span><svg class="b" aria-hidden="true" focusable="false"><use href="#b-tiktok"/></svg>TikTok Shop</span></span>
@@ -1006,33 +1025,10 @@ dialog.dl-chat{width:min(1100px,calc(100% - 24px))}
       <h2 class="title rv">Что говорят <span class="hl">клиенты</span></h2>
       <p class="sub rv">Реальные сообщения из наших рабочих чатов с клиентами.</p>
     </div>
-    <div class="quotes"><figure class="q rv" style="--d:0.0s">
-        <svg class="qi" aria-hidden="true" focusable="false"><use href="#i-quote"/></svg>
-        <blockquote>Спасибо ещё раз за звонок сегодня и за то, что донесли, как мне кажется, очень важную вещь: мы почти не выделяемся сейчас для покупателя на Amazon (кроме необоснованно высокой цены) и нужно делать фокус на уникальности товара.</blockquote>
-        <figcaption>
-          <span class="av" aria-hidden="true">VC</span>
-          <span class="who"><b>Vladimir C.</b><small>Create Kits</small></span>
-          <button class="orig" type="button" data-chat="tg-5327958389147432162" aria-haspopup="dialog">Оригинал чата <svg class="i" aria-hidden="true" focusable="false"><use href="#i-expand"/></svg></button>
-        </figcaption>
-      </figure><figure class="q rv" style="--d:0.07s">
-        <svg class="qi" aria-hidden="true" focusable="false"><use href="#i-quote"/></svg>
-        <blockquote>Спасибо, что так хорошо вложились в аналитику и аудиты на этой неделе 👍</blockquote>
-        <figcaption>
-          <span class="av" aria-hidden="true">AB</span>
-          <span class="who"><b>Alexey B.</b><small>DeepStone</small></span>
-          <button class="orig" type="button" data-chat="tg-5327958389147432133" aria-haspopup="dialog">Оригинал чата <svg class="i" aria-hidden="true" focusable="false"><use href="#i-expand"/></svg></button>
-        </figcaption>
-      </figure><figure class="q rv" style="--d:0.14s">
-        <svg class="qi" aria-hidden="true" focusable="false"><use href="#i-quote"/></svg>
-        <blockquote>Ок, спасибо 😊 Думаю, у нас должно получиться что-то супер успешное 🙌 Жду не дождусь, когда полка будет готова.</blockquote>
-        <figcaption>
-          <span class="av" aria-hidden="true">VS</span>
-          <span class="who"><b>Valery S.</b><small>demvelstyle</small></span>
-          <button class="orig" type="button" data-chat="tg-5327958389147432179" aria-haspopup="dialog">Оригинал чата <svg class="i" aria-hidden="true" focusable="false"><use href="#i-expand"/></svg></button>
-        </figcaption>
-      </figure></div>
+    <div class="chats-one rv"><button class="btn btn-simple" type="button" data-chat="10" aria-haspopup="dialog"><svg class="i" aria-hidden="true" focusable="false"><use href="#i-expand"/></svg> Открыть на весь экран</button></div>
+    
   </div>
-  <div class="wrap"><div class="chats-one rv"><button class="btn btn-simple" type="button" data-chat="10" aria-haspopup="dialog"><svg class="i" aria-hidden="true" focusable="false"><use href="#i-expand"/></svg> Все 12 скриншотов чатов</button></div></div>
+  <div class="chats rv"><div class="mq mq-chats"><div class="mq-t"><div class="mq-set"><button class="chat wide" type="button" data-chat="10" aria-label="Оригинал чата 1/12" style="--ar:2.1"><img src="../img/chat-10-t.webp" alt="" loading="lazy" decoding="async" width="716" height="166"><svg class="ex" aria-hidden="true" focusable="false"><use href="#i-expand"/></svg></button><button class="chat wide" type="button" data-chat="11" aria-label="Оригинал чата 2/12" style="--ar:2.1"><img src="../img/chat-11-t.webp" alt="" loading="lazy" decoding="async" width="695" height="218"><svg class="ex" aria-hidden="true" focusable="false"><use href="#i-expand"/></svg></button><button class="chat wide" type="button" data-chat="12" aria-label="Оригинал чата 3/12" style="--ar:2.1"><img src="../img/chat-12-t.webp" alt="" loading="lazy" decoding="async" width="634" height="149"><svg class="ex" aria-hidden="true" focusable="false"><use href="#i-expand"/></svg></button><button class="chat wide" type="button" data-chat="13" aria-label="Оригинал чата 4/12" style="--ar:2.1"><img src="../img/chat-13-t.webp" alt="" loading="lazy" decoding="async" width="715" height="195"><svg class="ex" aria-hidden="true" focusable="false"><use href="#i-expand"/></svg></button><button class="chat" type="button" data-chat="tg-5327958389147432129" aria-label="Оригинал чата 5/12" style="--ar:1.6101"><img src="../img/chat-tg-5327958389147432129-t.webp" alt="" loading="lazy" decoding="async" width="644" height="400"><svg class="ex" aria-hidden="true" focusable="false"><use href="#i-expand"/></svg></button><button class="chat" type="button" data-chat="tg-5327958389147432133" aria-label="Оригинал чата 6/12" style="--ar:1.1212"><img src="../img/chat-tg-5327958389147432133-t.webp" alt="" loading="lazy" decoding="async" width="448" height="400"><svg class="ex" aria-hidden="true" focusable="false"><use href="#i-expand"/></svg></button></div><div class="mq-set" aria-hidden="true"><button class="chat wide" type="button" data-chat="10" tabindex="-1" aria-label="Оригинал чата 1/12" style="--ar:2.1"><img src="../img/chat-10-t.webp" alt="" loading="lazy" decoding="async" width="716" height="166"><svg class="ex" aria-hidden="true" focusable="false"><use href="#i-expand"/></svg></button><button class="chat wide" type="button" data-chat="11" tabindex="-1" aria-label="Оригинал чата 2/12" style="--ar:2.1"><img src="../img/chat-11-t.webp" alt="" loading="lazy" decoding="async" width="695" height="218"><svg class="ex" aria-hidden="true" focusable="false"><use href="#i-expand"/></svg></button><button class="chat wide" type="button" data-chat="12" tabindex="-1" aria-label="Оригинал чата 3/12" style="--ar:2.1"><img src="../img/chat-12-t.webp" alt="" loading="lazy" decoding="async" width="634" height="149"><svg class="ex" aria-hidden="true" focusable="false"><use href="#i-expand"/></svg></button><button class="chat wide" type="button" data-chat="13" tabindex="-1" aria-label="Оригинал чата 4/12" style="--ar:2.1"><img src="../img/chat-13-t.webp" alt="" loading="lazy" decoding="async" width="715" height="195"><svg class="ex" aria-hidden="true" focusable="false"><use href="#i-expand"/></svg></button><button class="chat" type="button" data-chat="tg-5327958389147432129" tabindex="-1" aria-label="Оригинал чата 5/12" style="--ar:1.6101"><img src="../img/chat-tg-5327958389147432129-t.webp" alt="" loading="lazy" decoding="async" width="644" height="400"><svg class="ex" aria-hidden="true" focusable="false"><use href="#i-expand"/></svg></button><button class="chat" type="button" data-chat="tg-5327958389147432133" tabindex="-1" aria-label="Оригинал чата 6/12" style="--ar:1.1212"><img src="../img/chat-tg-5327958389147432133-t.webp" alt="" loading="lazy" decoding="async" width="448" height="400"><svg class="ex" aria-hidden="true" focusable="false"><use href="#i-expand"/></svg></button></div></div></div><div class="mq mq-chats mq-rev"><div class="mq-t"><div class="mq-set"><button class="chat" type="button" data-chat="tg-5327958389147432149" aria-label="Оригинал чата 7/12" style="--ar:1.3348"><img src="../img/chat-tg-5327958389147432149-t.webp" alt="" loading="lazy" decoding="async" width="534" height="400"><svg class="ex" aria-hidden="true" focusable="false"><use href="#i-expand"/></svg></button><button class="chat" type="button" data-chat="tg-5327958389147432156" aria-label="Оригинал чата 8/12" style="--ar:1.7228"><img src="../img/chat-tg-5327958389147432156-t.webp" alt="" loading="lazy" decoding="async" width="689" height="400"><svg class="ex" aria-hidden="true" focusable="false"><use href="#i-expand"/></svg></button><button class="chat" type="button" data-chat="tg-5327958389147432162" aria-label="Оригинал чата 9/12" style="--ar:1.0381"><img src="../img/chat-tg-5327958389147432162-t.webp" alt="" loading="lazy" decoding="async" width="415" height="400"><svg class="ex" aria-hidden="true" focusable="false"><use href="#i-expand"/></svg></button><button class="chat" type="button" data-chat="tg-5327958389147432169" aria-label="Оригинал чата 10/12" style="--ar:1.4346"><img src="../img/chat-tg-5327958389147432169-t.webp" alt="" loading="lazy" decoding="async" width="574" height="400"><svg class="ex" aria-hidden="true" focusable="false"><use href="#i-expand"/></svg></button><button class="chat wide" type="button" data-chat="tg-5327958389147432179" aria-label="Оригинал чата 11/12" style="--ar:2.1"><img src="../img/chat-tg-5327958389147432179-t.webp" alt="" loading="lazy" decoding="async" width="840" height="283"><svg class="ex" aria-hidden="true" focusable="false"><use href="#i-expand"/></svg></button><button class="chat wide" type="button" data-chat="tg-5327958389147432183" aria-label="Оригинал чата 12/12" style="--ar:2.1"><img src="../img/chat-tg-5327958389147432183-t.webp" alt="" loading="lazy" decoding="async" width="840" height="216"><svg class="ex" aria-hidden="true" focusable="false"><use href="#i-expand"/></svg></button></div><div class="mq-set" aria-hidden="true"><button class="chat" type="button" data-chat="tg-5327958389147432149" tabindex="-1" aria-label="Оригинал чата 7/12" style="--ar:1.3348"><img src="../img/chat-tg-5327958389147432149-t.webp" alt="" loading="lazy" decoding="async" width="534" height="400"><svg class="ex" aria-hidden="true" focusable="false"><use href="#i-expand"/></svg></button><button class="chat" type="button" data-chat="tg-5327958389147432156" tabindex="-1" aria-label="Оригинал чата 8/12" style="--ar:1.7228"><img src="../img/chat-tg-5327958389147432156-t.webp" alt="" loading="lazy" decoding="async" width="689" height="400"><svg class="ex" aria-hidden="true" focusable="false"><use href="#i-expand"/></svg></button><button class="chat" type="button" data-chat="tg-5327958389147432162" tabindex="-1" aria-label="Оригинал чата 9/12" style="--ar:1.0381"><img src="../img/chat-tg-5327958389147432162-t.webp" alt="" loading="lazy" decoding="async" width="415" height="400"><svg class="ex" aria-hidden="true" focusable="false"><use href="#i-expand"/></svg></button><button class="chat" type="button" data-chat="tg-5327958389147432169" tabindex="-1" aria-label="Оригинал чата 10/12" style="--ar:1.4346"><img src="../img/chat-tg-5327958389147432169-t.webp" alt="" loading="lazy" decoding="async" width="574" height="400"><svg class="ex" aria-hidden="true" focusable="false"><use href="#i-expand"/></svg></button><button class="chat wide" type="button" data-chat="tg-5327958389147432179" tabindex="-1" aria-label="Оригинал чата 11/12" style="--ar:2.1"><img src="../img/chat-tg-5327958389147432179-t.webp" alt="" loading="lazy" decoding="async" width="840" height="283"><svg class="ex" aria-hidden="true" focusable="false"><use href="#i-expand"/></svg></button><button class="chat wide" type="button" data-chat="tg-5327958389147432183" tabindex="-1" aria-label="Оригинал чата 12/12" style="--ar:2.1"><img src="../img/chat-tg-5327958389147432183-t.webp" alt="" loading="lazy" decoding="async" width="840" height="216"><svg class="ex" aria-hidden="true" focusable="false"><use href="#i-expand"/></svg></button></div></div></div></div>
 </section>
 
 <!-- ================= TEAM ================= -->
@@ -1045,10 +1041,21 @@ dialog.dl-chat{width:min(1100px,calc(100% - 24px))}
         <ul class="checks rv">
 <li><span class="ck"><svg class="i" aria-hidden="true" focusable="false"><use href="#i-check"/></svg></span><span>10+ лет в e-commerce</span></li><li><span class="ck"><svg class="i" aria-hidden="true" focusable="false"><use href="#i-check"/></svg></span><span>Помогли 1000+ продавцам</span></li><li><span class="ck"><svg class="i" aria-hidden="true" focusable="false"><use href="#i-check"/></svg></span><span>Опыт на Amazon, Shopify, TikTok Shop, AliExpress, Ozon, Wildberries, Яндекс Маркет и др.</span></li>          <li><span class="ck"><svg class="i" aria-hidden="true" focusable="false"><use href="#i-check"/></svg></span><span>Основатель <b>Азат Шакуров</b> — CEO, AXY Company</span></li>
         </ul>
-        <a class="btn btn-glow btn-lg rv" href="#audit">Записаться на консультацию <svg class="i" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg></a>
+        <div class="tstats rv"><div class="fact"><b><span data-count="10">10</span><span class="o">+</span></b><span>лет в e-commerce</span></div><div class="fact"><b><span data-count="1000">1000</span><span class="o">+</span></b><span>продавцам помогли</span></div></div>
       </div>
       <div class="team-r rv" style="--d:.1s">
-        <div class="tm-grid"><figure class="tm"><img src="../img/ava-azat.webp" alt="Азат" width="88" height="88" loading="lazy" decoding="async"><figcaption><b>Азат</b><small>CEO · основатель</small></figcaption></figure><figure class="tm"><img src="../img/ava-max.webp" alt="Макс" width="88" height="88" loading="lazy" decoding="async"><figcaption><b>Макс</b><small>Управление и масштаб</small></figcaption></figure><figure class="tm"><img src="../img/ava-ivan.webp" alt="Иван" width="88" height="88" loading="lazy" decoding="async"><figcaption><b>Иван</b><small>Project Manager</small></figcaption></figure><figure class="tm"><img src="../img/ava-evgeniy.webp" alt="Евгений" width="88" height="88" loading="lazy" decoding="async"><figcaption><b>Евгений</b><small>Shopify Tech Lead</small></figcaption></figure><figure class="tm"><img src="../img/ava-nastya.webp" alt="Настя" width="88" height="88" loading="lazy" decoding="async"><figcaption><b>Настя</b><small>SMM и контент</small></figcaption></figure><figure class="tm"><img src="../img/ava-aida.webp" alt="Аида" width="88" height="88" loading="lazy" decoding="async"><figcaption><b>Аида</b><small>Видеограф</small></figcaption></figure></div>
+        <div class="orbit">
+          <div class="orbit-glow" aria-hidden="true"></div>
+          <div class="orbit-ring o1" aria-hidden="true"></div>
+          <div class="orbit-ring o2" aria-hidden="true"></div>
+          <div class="orbit-c"><svg class="i" aria-hidden="true" focusable="false"><use href="#i-handshake"/></svg><b>Ваш бренд</b><small>Партнёр</small></div>
+          <figure class="mem" style="--a:-90deg"><img src="../img/ava-azat.webp" alt="Азат" width="88" height="88" loading="lazy" decoding="async"><figcaption><b>Азат</b><small>CEO · основатель</small></figcaption></figure>
+          <figure class="mem" style="--a:-30deg"><img src="../img/ava-max.webp" alt="Макс" width="88" height="88" loading="lazy" decoding="async"><figcaption><b>Макс</b><small>Управление и масштаб</small></figcaption></figure>
+          <figure class="mem" style="--a:30deg"><img src="../img/ava-ivan.webp" alt="Иван" width="88" height="88" loading="lazy" decoding="async"><figcaption><b>Иван</b><small>Project Manager</small></figcaption></figure>
+          <figure class="mem" style="--a:90deg"><img src="../img/ava-evgeniy.webp" alt="Евгений" width="88" height="88" loading="lazy" decoding="async"><figcaption><b>Евгений</b><small>Shopify Tech Lead</small></figcaption></figure>
+          <figure class="mem" style="--a:150deg"><img src="../img/ava-nastya.webp" alt="Настя" width="88" height="88" loading="lazy" decoding="async"><figcaption><b>Настя</b><small>SMM и контент</small></figcaption></figure>
+          <figure class="mem" style="--a:210deg"><img src="../img/ava-aida.webp" alt="Аида" width="88" height="88" loading="lazy" decoding="async"><figcaption><b>Аида</b><small>Видеограф</small></figcaption></figure>
+        </div>
       </div>
     </div>
     
